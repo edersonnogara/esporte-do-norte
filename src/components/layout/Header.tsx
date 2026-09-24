@@ -31,10 +31,6 @@ const menuItems = [
     label: "Notícias",
     href: "/noticias",
   },
-  {
-    label: "Resultados",
-    href: "/resultados",
-  },
 ];
 
 export function Header() {

@@ -1,41 +1,33 @@
 "use client";
-import { MainLayout } from "@/components/layout/MainLayout";
-import { HeroSection } from "@/components/home/HeroSection";
-import { CategoriesSection } from "@/components/home/CategoriesSection";
-import { FeaturedProductsSection } from "@/components/home/FeaturedProductsSection";
-import { LatestNewsSection } from "@/components/home/LatestNewsSection";
-import { FeaturedChampionshipsSection } from "@/components/home/FeaturedChampionshipsSection";
-import { NewsletterSection } from "@/components/home/NewsletterSection";
 
+import { MainLayout } from "@/components/layout/MainLayout";
+import { FeaturedChampionshipsSection } from "@/components/home/FeaturedChampionshipsSection";
 import { useState } from "react";
 import Link from "next/link";
 
-export default function HomePage() {
-const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function campeonatos() {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     function closeMobileMenu() {
         setMobileMenuOpen(false);
     }
 
-  return (
-    <MainLayout>
 
-      {/* <HeroSection /> - Divulgação do sistema de campeonatos*/}
+    return (
+        <MainLayout>
 
-      <LatestNewsSection />
+            <FeaturedChampionshipsSection />
 
-      <HeroSection />
-
-      <CategoriesSection />
-
-      {/* Banner Publicitário */}
+            {/* Banner Publicitário */}
             <section className="bg-slate-900 py-20">
                 <div className="mx-auto max-w-7xl rounded-3xl bg-linear-to-r from-blue-700 to-blue-500 p-16 text-center text-white">
 
                     <Link
                         href="/loja"
                         onClick={closeMobileMenu}
-                     >
+                        
+                    >
+
                         <h2 className="text-5xl  font-black">
                             Encontre AQUI! - Acesse a loja
                             <p className="mx-auto mt-1 max-w-5xl text-xl text-blue-100">
@@ -44,17 +36,18 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
                             </p>
                         </h2>
                         
+
                     </Link>
 
                 </div>
             </section>
 
-      {/* <FeaturedChampionshipsSection /> - Campeonatos em destaque*/}
 
-      {/* <FeaturedProductsSection /> - Venda de produtos esportivos*/}
 
-      <NewsletterSection />
 
-    </MainLayout>
-  );
+
+
+
+        </MainLayout>
+    );
 }
